@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	
+	@media only screen and (min-width: 600px) {
+    body {
+        background-image: url("wpic.jpg");
+		position:relative;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		}
+	.phoneSizeMB{
+		display:none;
+		}
+	.phoneHeader{
+		display:none;
+		}
+	}
+	
+	@media only screen and (max-width: 600px){
+	body{
+		background-color:powderblue;
+		}
+	.phoneSizeMB{
+		position:relative;
+		width:100%;
+		display:inline-block;
+		background-color:white;
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+		
+		}
+	#Menuimg{
+		position:relative;
+		width:100%;
+		}
+	#btn{
+		margin: 1%;
+		width:10%;
+		float:right;
+		position: relative;
+		display: inline-block;
+		border-radius:5px;
+		opacity:0.5;
+		cursor: pointer;
+		}
+	.iMenu{
+		display: none;
+		position: absolute;
+		margin-right:12%;
+		background-color: #f9f9f9;
+		right:0;
+		overflow:auto;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		}
+	.iMenu a{
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		}
+	.iMenu a:hover{
+		background-color: #f1f1f1;
+		}
+	.show {display: block;}
+	#homepg{
+		position:absolute;
+		background-color: white;
+		border: 2px solid #008CBA;
+		color: black;
+		padding: 1.3% 1.5%;
+		overflow: auto;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 1%;
+		cursor: pointer;
+		}
+	.phoneHeader{
+		display:inline-block;
+		background-color:white;
+		border-left: 5px solid red;
+		}
+	.hwp{
+		margin:2%;
+		position:relative;
+		float:left;
+		width:30%;
+		}
+	}
+</style>
+</head>
+
+<body>
+<div class="phoneSizeMB">
+	<button id="btn" onclick="menudrop()" class="imgb" title="Where to?">
+	<img src="menu.png" id="Menuimg"></img></button>
+	<div class="iMenu" id="pMenu">
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+	</div>
+	</button>
+	<button id="homepg" title="You are here!">Home</button>
+</div>
+
+
+<script>
+
+function menudrop() {
+    document.getElementById("pMenu").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.imgb')) {
+
+    var dropdowns = document.getElementsByClassName("iMenu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<div class="phoneHeader">
+<img src="hwpic.jpg" class="hwp"></img>
+<h1>Find your PERFECT Honeymoon vacation!</h1>
+</div>
+
+</body>
+
+</html>
