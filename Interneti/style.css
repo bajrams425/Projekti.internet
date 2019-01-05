@@ -1,0 +1,176 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+html
+{
+    background: url("albiona.png") no-repeat center center fixed ;
+   position: relative;
+   background-repeat: no-repeat;
+   background-position: top;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.7);
+    border-radius:15px;
+    width:75%;
+    margin-left: 12.5%;
+    
+}
+
+li
+{
+    float:right;
+    font-family: "Roboto",sans-serif;
+}
+li:last-child
+{
+    
+    font-family: "Roboto",sans-serif;
+
+}
+li a
+{
+    display:block;
+    color:black;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active)
+{
+    background-color: #00cccc;
+    border-radius: 15px;
+}
+.active
+{
+    color:white;
+    background-color:#0066cc;
+	border-radius:15px;
+}
+
+
+
+body
+{
+    font-family: monospace;
+}
+
+.hero
+{
+    position:absolute;
+    width:1200px;
+    margin-left: 0px;
+    margin-top:0px;
+}
+h1
+{
+    color:white;
+    text-transform:uppercase;
+    font-size:85px;
+    text-align:center;
+    margin-top:10%;
+}
+
+
+button
+{
+    border:1px solid white;
+    padding:10px 60px;
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    text-transform: uppercase;
+    
+}
+.btn-one
+{
+    
+    font-family: "Roboto",sans-serif;
+    margin-left:380px;
+    color:black;
+}
+.btn-two
+{
+    font-family: "Roboto",sans-serif;
+    margin-left:50px;
+    color: black;
+}
+.btn-two:hover
+{
+    background-color:darkorange;
+    transition: all 0.5s  ease-in;
+    color:white;
+}
+.btn-one:hover
+{
+    background-color:darkorange;
+    transition: all 0.5s  ease-in;
+    color:white;
+}
+.abp
+{
+    margin-left:300px;
+    margin-top:2%;
+    background-color:rgba(255,255,255,0.7);
+    width:60%;
+    padding: 3% 4%;
+    border-radius: 15px;
+    font-family: "Roboto",sans-serif;
+    display: none;
+    
+
+}
+#para1
+{
+    margin-top:42%;
+    font-family: "AbrilTextLt-Italic", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif
+}
+#para2
+{
+    margin-top:42%;
+    width:40%;
+    font-family: "AbrilTextLt-Italic", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif
+}
+#para1:hover
+{
+    background-color: rgba(255,255,255,1);
+}
+#para2:hover
+{
+    background-color: rgba(255,255,255,1);
+}
+@media only screen and (min-width:1000px){
+    
+h1
+{
+    color:white;
+    text-transform:uppercase;
+    font-size:85px;
+    text-align:center;
+    margin-top:25%;
+}
+#para1
+{
+    margin-top:35%;
+    font-family: "AbrilTextLt-Italic", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif
+}
+#para2
+{
+    margin-top:35%;
+    width:40%;
+    font-family: "AbrilTextLt-Italic", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif
+}
+}

@@ -1,0 +1,49 @@
+CACHE MANIFEST
+
+#CSS:
+desktop.css
+desktop1.css
+LoaderCss.css
+style1.css
+style.css
+honeymoon.css
+weedingvenues.css
+
+#IMAGES:
+ausbi.jpg
+hwpic.jpg
+wrings.jpg
+wpic.jpg
+h1.jpg
+h2.jpg
+h3.jpg
+h4.jpg
+h5.jpg
+h6.jpg
+hdesktop.jpg
+w1.jpg
+w2.jpg
+w3.jpg
+w4.jpg
+w5.jpg
+wdesktop.jpg
+Jade Mountain Weddingg.jpg
+Jade Mountainn.jpg
+Four Seasons couple.jpg
+Four Seasons.jpg
+Song Saa couple.jpg
+Song Saa (2000x1500).jpg
+Villas Bali couple.jpg
+Finest-Fabulous-Modern-Luxury-Villas-Bali-hj (2000x1333).jpg
+Soneva JANI couples.jpg
+Soneva JANI(2000x1500).jpg
+albiona.png
+
+
+NETWORK:
+*
+EXTERNAL:
+
+https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+
+FALLBACK:

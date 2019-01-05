@@ -1,0 +1,125 @@
+@media only screen and (min-width: 600px) {
+    body {
+        background-image: url("hdesktop.jpg");
+        position:relative;
+        height: 100%;
+        width: 1300px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.phoneSizeMB{
+		display:none;
+	}
+
+	.phoneHeader{
+		display:none;
+	}
+	
+	.Products{
+		display:none;
+	}
+	
+	.phr{
+		display:none;
+	}
+	
+	#desktopview{
+		display: inline-block;
+		margin-left: 10%;
+		width: 80%;
+		border-radius: 15px;
+		overflow: auto;
+		opacity: 1;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: rgba(255,255,255,0.7);
+		border-radius: 15px;
+	}
+
+	li {
+		float: right;
+		
+	}
+
+	li:last-child {
+		border-left: none;
+		
+	}
+
+	li a {
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		border-radius: 15px;
+	}
+
+	li a:hover:not(.active) {
+		background-color: #00cccc;
+	}
+
+	.active {
+		color: white;
+		background-color: #0066cc;
+    }
+        
+    #one{
+        background-color: rgba(255,255,255,0);
+        height:100%;
+        display: block;
+        border-radius: 15px;
+        overflow: auto;
+	}
+
+	.text1{
+		
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		color: black;		
+	}
+    
+    .text2 {
+        text-align: center; 
+		color:black;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+	}
+	
+	p {
+		font-family: Arial, Helvetica, sans-serif;
+	  }
+
+	#first{
+		height:20%;
+		display: block;
+		border: 1px solid black;
+		border-radius: 15px;
+		overflow: auto;
+	}
+	
+	.fimg{
+		width:35%;
+		height:100%;
+		margin: 2%;
+	}
+	
+	.fhead{
+		float: right;
+		height: 100%;
+		width: 60%;
+	}
+	
+	#first:hover{
+		background-color: rgb(75, 184, 247);
+	}
+
+	.checked {
+		color: gold;
+	}
+}

@@ -1,0 +1,97 @@
+	body {
+        background-image: url("ausbi.jpg");
+		position:relative;
+		background-repeat: no-repeat;
+		background-position: top;
+		background-attachment: fixed;
+		background-size: 100%;
+		}
+	#desktopview{
+		display: inline-block;
+		margin-left: 12.5%;
+		width: 75%;
+		height: auto;
+		border-radius: 15px;
+	}
+	nav {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: rgba(255,255,255,0.7);
+		border-radius: 15px;
+		}
+	nav a {
+		float: right;
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		}
+
+	nav a:hover:not(.active) {
+		border-radius: 15px;
+		background-color: #00cccc;
+		}
+
+	.active {
+		float:left;
+		color: white;
+		border-radius: 15px;
+		background-color: #0066cc;
+		}
+	#b1{
+		font-size: 200%;
+		font-family: "Times New Roman", Times, serif;
+		width: 100%;
+		height: 75px;
+		border-radius: 15px;
+		background-color: rgba(255,255,255,0.7);
+		}
+	#b1:hover{
+		background-color: rgba(255,255,255,1);
+		}
+	#infoform{
+		display:none;
+		width: auto;
+		font-family: "Times New Roman", Times, serif;
+		font-size: 150%;
+		background-color: rgba(255,255,255,0.7);
+		padding: 2% 3%;
+		overflow: hidden;
+		}
+	#infoform:hover{
+		background-color: rgba(255,255,255,1);
+		}
+	#infoform input{
+		border-style: groove;
+		font-size: 105%;
+		font-family: "Times New Roman", Times, serif;
+		}
+	.order{
+		display:none;
+		}
+	.rate{
+		display:none;
+		}
+	.mail{
+		display:none;
+		}
+	.ccheckbox{
+		display: none;
+		}
+	textarea{
+		border-style: dotted;
+		}
+	footer{
+		padding: 2% 3%;
+		font-size: 200%;
+		font-family: "Times New Roman", Times, serif;
+		width: 94%;
+		border-radius: 15px;
+		background-color: rgba(255,255,255,0.7);
+		}
+	footer:hover{
+		background-color: rgba(255,255,255,1);
+		}

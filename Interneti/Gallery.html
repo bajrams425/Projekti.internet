@@ -1,0 +1,332 @@
+<html manifest="site.appcache">
+<head>
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Slide show</title>
+	<link rel="shortcut icon" href="llogo.ico" />
+    <style>
+        h2
+        {
+            
+  font-size: 80px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  margin:3px;
+        }
+      
+  
+        
+        div.b
+        
+        {
+            text-align:left;
+			margin-left:15%;
+            font-size: 27px;
+            padding: 15px 20px;
+            font-family: "Roboto" sans-serif;
+            font-style: italic;
+            font-weight: bold;
+        }
+        div.a
+        {
+            text-align: center;
+            font-size:20px;
+            position:bottom;
+            padding-top: 2%;
+            margin-left:8.5%;
+            width:73.5%;
+            margin-left:15.7%;
+            
+          
+        }
+        * {box-sizing:border-box}
+.slideshow{
+  width: 80%;
+  max-width: 1000px;
+}
+.mySlides {
+margin-left:8%;
+  display:none;
+  margin-top: 15%;
+  width: 100%;
+  height: 300px;
+
+}
+.mySlide img{
+	width: 200%;
+}
+.dotss{
+	z-index: 1;
+	margin-top: 3%;
+	margin-right: 15%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  margin-top: -5px;
+  padding: 6px;
+  color: white;
+  font-weight:45px ;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 1px 3px 3px 1px;
+  user-select: none;
+    background-color:darkorange;
+}
+
+.next {
+  right: 0;
+  top:0;
+  border-radius: 3px 1px 1px 3px;
+  margin-right: 26%;
+  margin-top: 25%;
+}
+.prev
+{
+    left:0; 
+    top:0;
+    margin-left: 10%;
+    margin-top: 25%;
+}
+.prev:hover, .next:hover {
+  background-color:green;
+    border-radius: 25%;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 10px;
+  padding: 16px 18px;
+  position: absolute;
+  bottom: 16px;
+  width: 15%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    </style>
+    <script>
+
+
+$(document).ready(function(){
+	showSlides(1);
+});
+
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+    </head>
+<body>
+
+        <div id="destkopview">
+
+                <ul>
+                    <li><a href="ContactUS.html" target="_blank">Contact us!</a></li>
+					<li><a href="About Us.html">About US</a></li>
+					<li><a href="Honeymoon.html">Honeymoons</a></li>
+					<li><a href="WeddingVenues.html">Venues</a></li>
+					<li><a href="home.html">Home</a></li>
+                   <li style="float:left;"><a class="active"href="#gallery">Gallery</a></li>
+                </ul>
+            
+            </div>
+
+
+
+
+
+<div class="b"> Here Are Some Experiences From Our Trusted Clients:</div> 
+
+<div class="slideshow">
+  <div class="mySlides fade">
+    <img src="Jade Mountain weddingg.jpg"style="width:73.5%; height:360px;">
+    <div class="a"> Here are Mr. and Mrs. Smith,they had their wedding and honeymoon holidays in 
+            Jade Mountain .
+            <br>
+            "We were searching for our honeymoon holidays and suddenly we came across  "WePlanner" agency!
+             Oh God, really ...We are very surprised from their offers,honestly we had the wedding and our honeymoon to be remembered for the whole life.
+             I don't think we should add more,but here  you can see our main pictures and why not ,if you want to experience something like us to be remembered choose WEPLANNER Agency."
+        
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Jade Mountainn.jpg" style="width:73.5%; height:360px;">
+    <div class="a"> This is the hotel where Mr. and Mrs. Smith, had their  honeymoon.
+      <br>
+      Jade Mountain Resort Soufriere is ideally positioned in peaceful surrounds in Soufriere, just a short drive from Canaries and Choiseul. 
+      It provides free wireless internet, a 24-hour reception and massages.
+      Jade Mountain Resort Soufriere has 55 unique rooms that are equipped with all the essentials to ensure an enjoyable stay.
+      <br>
+      The resort is a convenient base to explore nearby Pitons and Qualibou. 
+      The surrounding countryside ensures plenty of opportunity for scenic walks.
+
+
+          
+        </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Four Seasons couple.jpg" style="width:73.5%; height:360px;">
+    <div class="a">
+            Here are Mr. and Mrs. Brown,they had their engagement  in Four Seasons!
+            <br>
+            "We were searching for our honeymoon holidays and ideas for our engagement and suddenly we came across  "WePlanner" agency!
+            Oh God, really ...We are very surprised from their offers,honestly we had the wedding and our honeymoon to be remembered for the whole life.
+           I don't think we should add more,but here  you can see our main pictures and why not ,if you want to experience something like us to be remembered choose WEPLANNER Agency."
+                
+        </div>
+    
+  </div>
+<div class="mySlides fade">
+    <img src="Four Seasons.jpg" style="width:73.5%; height:360px;">
+    <div class="a"> This is the hotel where Mr. and Mrs. Brown honeymoon and their engagement.
+      <br>
+      Four Seasons Hotels Limited, trading as Four Seasons Hotels and Resorts, is an international luxury hospitality company headquartered in Toronto, Ontario.
+       Four Seasons operates more than 100 hotels worldwide.
+       Since 2007, Bill Gates and Prince Al-Waleed bin Talal have been majority owners of the company
+         
+        </div>
+    </div>
+    <div class="mySlides fade">
+            <img src="Song Saa couple.jpg" style="width:73.5%; height:360px;">
+            <div class="a"> Here are Mr. and Mrs. Richards,they had their honeymoon holidays in 
+                    Song Saa Hotel .
+                    <br>
+                    "We were searching for our honeymoon holidays and suddenly we came across  "WePlanner" agency!
+                    Oh God, really ...We are very surprised from their offers,honestly we had the wedding and our honeymoon to be remembered for the whole life.
+                   I don't think we should add more,but here  you can see our main pictures and why not ,if you want to experience something like us to be remembered choose WEPLANNER Agency."
+               
+                </div>
+            </div>
+            <div class="mySlides fade">
+                    <img src="Song Saa (2000x1500).jpg" style="width:73.5%; height:360px;">
+                    <div class="a"> This is the hotel where Mr. and Mrs. Richards spent their honeymoon holidays .
+                      <br>
+                      Tropical reefs, amazing sunset views and white private sandy beaches feature at Song Saa Private Island, 
+                      spanning over Koh Ouen and Koh Bong islands in Sihanoukville.
+                          
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                            <img src="Villas Bali couple.jpg" style="width:73.5%; height:360px;">
+                            <div class="a"> Here are Mr. and Mrs. Johnson,they had their honeymoon holidays in 
+                                    Villas Bali .
+                                    <br>
+                                    "We were searching for our honeymoon holidays and suddenly we came across  "WePlanner" agency!
+                                    Oh God, really ...We are very surprised from their offers,honestly we had the wedding and our honeymoon to be remembered for the whole life.
+                                   I don't think we should add more,but here  you can see our main pictures and why not ,if you want to experience something like us to be remembered choose WEPLANNER Agency."
+                                
+                                </div>
+                            </div>
+                            <div class="mySlides fade">
+                                    <img src="Finest-Fabulous-Modern-Luxury-Villas-Bali-hj (2000x1333).jpg" style="width:73.5%; height:360px;">
+                                    <div class="a"> This is the hotel where Mr. and Mrs.Johnson spent their holidays.
+                                      <br>
+                                      Sun, sea and sand: the ultimate combination for a summery holiday. 
+                                      Our beach villas are ideally situated for those who like to feel sand between their toes, a fresh sea breeze on their face, and fall asleep to the hypnotic sound of breaking waves. 
+                                      This prized collection of coastal luxury villas is available for direct bookings exclusively from Elite Havens, with guaranteed best rates and exemplary service. Choose from picture-perfect villas with sea views, strategically located villas near the beach and in-demand
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="mySlides fade">
+                                            <img src="Soneva JANI couples.jpg" style="width:73.5%; height:360px;">
+                                            <div class="a"> Here are Mr. and Mrs. Jones,they had their honeymoon holidays in Soneva Jani.
+                                                <br>
+                                                "We were searching for our honeymoon holidays and suddenly we came across  "WePlanner" agency!
+                                                Oh God, really ...We are very surprised from their offers,honestly we had the wedding and our honeymoon to be remembered for the whole life.
+                                               I don't think we should add more,but here  you can see our main pictures and why not ,if you want to experience something like us to be remembered choose WEPLANNER Agency."
+                                                </div>
+                                            </div>
+                                            <div class="mySlides fade">
+                                                    <img src="Soneva JANI(2000x1500).jpg" style="width:73.5%; height:360px;">
+                                                    <div class="a"> This is the hotel where Mr. and Mrs. Jones had their honeymoon holidays.
+                                                      <br>
+                                                      An imaginative journey that began over two decades ago, the Soneva story continues with Soneva Jani, the brand’s newest luxury resort offering.
+                                                       Inspired by a word that means ‘wisdom’ in Sanskrit, Soneva Jani encompasses a collection of Water Villas and Island Sanctuaries set within a lagoon of crystal clear waters, 
+                                                       fringed by pristine beaches and blanketed in lush tropical greenery
+                                                           
+                                                        </div>
+                                                    </div>
+    
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align: center; margin-top: 10%" class="dotss">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html manifest="site.appcache">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="llogo.ico" />
+    <title>WEPLANNER Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <header>
+<div class="row"></div>
+
+
+
+
+
+<div id="destkopview">
+
+    <ul>
+		<li><a href="ContactUS.html" target="_blank">Contact us!</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Honeymoon.html">Honeymoons</a></li>
+		<li><a href="WeddingVenues.html">Venues</a></li>
+		<li><a href="home.html">Home</a></li>
+<li style="float:left;"><a class="active"href="#about">About</a></li>
+    </ul>
+
+</div>
+
+<div class="hero">
+    <h1>Are You Ready?</h1>
+    <button class="btn-one" onclick="myFunction()">Read More About Us</button>
+    
+    <button class="btn-two" onclick="myotherFunction()">Staff</button>
+
+    </div>
+    <div>
+        <p id="para1" class="abp">
+   <i> Welcome to our wedding website, we can’t wait to celebrate our special day with you.
+    <br>
+    We’ve created this website as a convenient and interactive way to share all of the important details with you in the lead up to our wedding.
+     You can also read more about our love story, get to know our awesome honeymoons, and check out our registry information too.
+     So have fun, take a look around and don’t forget to <abbr title="Répondez s'il vous plaît">RSVP</abbr>!
+     <br>
+     Finally – thank you for your ongoing love and support. We are so excited to share this day with you and look forward to dancing the night away with all of our favourite people!’</i>
+        </p>
+        <pre id="para2" class="abp">
+        -Albiona Ismajli
+        Email:albionaismajli1@gmail.com, 
+        Phone Nr.:+377 45 63 72 99.
+
+       - Blendi Berisha
+        Email:blendberiisha9@gmail.com,
+        Phone Nr.:+386 49 42 80 55. 
+
+       - Bajram  Sherifi 
+        Email:bajrams415@gmail.com,
+        Phone Nr.:+386 49 35 96 10.
+        </pre>
+
+    </div>
+
+
+</div>
+
+
+<script>
+        function myFunction()
+        {
+            var x=document.getElementById("para1");
+            if(x.style.display==="none"){
+                x.style.display='block';
+                document.getElementById("para2").style.display="none";
+                }
+                else{
+                    x.style.display='none';
+                }
+            
+        }
+        function myotherFunction()
+        {
+            var x=document.getElementById("para2");
+            if(x.style.display==="none"){
+                x.style.display="block";
+                document.getElementById("para1").style.display="none";}
+                else{
+                    x.style.display="none";
+                }
+        }
+    </script>
+    
+</body>
+</html>

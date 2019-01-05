@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html manifest="site.appcache">
+
+<head>
+<title>Contact Us!</title>
+<link rel="shortcut icon" href="llogo.ico" />
+<meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+ <link rel="stylesheet" type="text/css" href="desktop1.css">
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body >
+
+<div id="desktopview">
+	
+	<nav>
+		<li><a href="About Us.html">About US</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Honeymoon.html">Honeymoons</a></li>
+		<li><a href="WeddingVenues.html">Venues</a></li>
+		<li><a href="home.html">Home</a></li>
+		<a class="active" href="#cus">Contact us!</a>
+	</nav>
+	
+	<br>
+	
+	<section id="S1">
+	
+	<button id="b1">Enter your info HERE</button>
+	
+	<form id="infoform" action="mailto:bajrams415@gmail.com" method="post" enctype="text/plain">
+		First name:
+		<input type="text" name="firstname" id="fname" required>
+		<br><br>
+		Last name:
+		<input type="text" name="lastname" style="margin-left:0.31%" id="lname" required>
+		<br><br>
+		E-mail:
+		<input type="email" name="E-mail" style="margin-left:3.378%" id="eMail" required>
+		<br><br>
+		Phone:
+		<input type="text" name="Phone" style="margin-left:3.8%" id="phone">
+		<br><br>
+		What would you like to do?<br>
+		<input type="radio" name="infotype" value="Order">Order<br>
+		<input type="radio" name="infotype" value="Rate">Rate<br>
+		<input type="radio" name="infotype" value="Mail">Mail<br>
+		<br><br>
+		<div class="order">
+		Product Number:
+		<input type="text" name="pnum" id="pnum">
+		<br><br>
+		Do you have any coupon:
+		<input type="checkbox" name="cyn" onchange="valueChanged()">
+		<div class="ccheckbox">
+		<br>
+		Coupon Password:
+		<input type="password" name="cp" id="cpass" id="cp">
+		<br><br>
+		Show password?
+		<input type="checkbox" name="option" onchange="ptt()" />
+		</div>
+		<br><br>
+		Any Special Requests?:<br>
+		<textarea name="reqtext" style="width:100%; height:100px" id="reqtext"></textarea>
+		<br><input type="submit">
+		</div>
+		<div class="rate">
+		Product Number:
+		<input type="text" name="prnum" id="prnum">
+		<br><br>
+		What would your rate be:
+		<input type="number" name="rnum" min="1" max="10" style="width: 60px">/10
+		<br><br>
+		Tell us why:<br>
+		<textarea name="ratext" style="width:100%; height:100px" id="ratext"></textarea>
+		<input type="submit">
+		</div>
+		<div class="mail">
+		Enter your mail:<br>
+		<textarea name="mtext" style="width:100%; height:100px" id="mtxt"></textarea>
+		<abbr title="Send the mail!">Send:</abbr> <input type="Submit" value="Click here!">
+		<br></div>
+		If you want to reset click here:
+		<input type="reset" value="Reset">
+	</form>
+	
+	</section>
+	
+	<br>
+	
+	<footer>
+	
+	<p>Just for fun</p><p>Click the button to get your coordinates.</p>
+
+	<button onclick="getLocation()">Try It</button>
+
+	<p id="gloc"></p>
+	
+	<address>
+		Find us at: FIEK<br>
+		Prishtina, Kosovo<br>
+		Call me: +38649359610<br>
+		Europe
+	</address>
+	
+	<footer>
+
+	<script>
+	$(document).ready(function(){
+	  $("#b1").click(function(){
+		$("form").slideToggle();
+	  });
+	});
+	</script>
+
+		<script>
+			$(document).ready(function(){
+			$('input[name=infotype]').on('change', function(){
+			var n = $(this).val();
+			switch(n)
+			{
+					case 'Order':
+						  $(".rate").hide();
+						  $(".mail").hide();
+						  $('input[name=prnum]').val('');
+						  $('input[name=rnum]').val('');
+						  $('textarea[name=ratext]').val('');
+						  $('textarea[name=mtext]').val('');
+						  $(".order").show();
+						  break;
+					case 'Rate':
+						  $(".order").hide();
+						  $(".mail").hide();
+						  $('input[name=pnum]').val('');
+						  $('input[name=cp]').val('');
+						  $('textarea[name=reqtext]').val('');
+						  $('textarea[name=mtext]').val('');
+						  $(".rate").show();
+						  break;
+					case 'Mail':
+						  $(".order").hide();
+						  $(".rate").hide();
+						  $('input[name=pnum]').val('');
+						  $('input[name=cp]').val('');
+						  $('textarea[name=reqtext]').val('');
+						  $('input[name=prnum]').val('');
+						  $('input[name=rnum]').val('');
+						  $('textarea[name=ratext]').val('');
+						  $(".mail").show();
+						  break;
+				}
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+	function valueChanged()
+	{
+		if($('input[name=cyn]').is(":checked"))   
+			$(".ccheckbox").show();
+		else
+			$(".ccheckbox").hide();
+	}
+	</script>
+	
+	<script>
+		function ptt() {
+		  var x = document.getElementById("cpass");
+		  if (x.type === "password") {
+			x.type = "text";
+		  } else {
+			x.type = "password";
+		  }
+		}
+		
+		var inputName= document.getElementById("fname");
+		localStorage.setItem("eMail", inputName.value);
+		
+		var inputLastName= document.getElementById("lname");
+		localStorage.setItem("lname", inputLastName.value);
+		
+		
+		var inputEmail= document.getElementById("eMail");
+		localStorage.setItem("eMail", inputEmail.value);
+	
+		var inputPhone= document.getElementById("phone");
+		localStorage.setItem("phone", inputPhone.value);
+		
+		var inputProductNumber = document.getElementById("pnum");
+		sessionStorage.setItem("pnum", inputProductNumber.value); 
+		
+		var inputRequestText = document.getElementById("reqtext");
+		sessionStorage.setItem("reqtext", inputRequestText.value);
+		
+		var inputProductNum = document.getElementById("prnum");
+		sessionStorage.setItem("prnum", inputProductNum.value);
+		
+		var inputRateText = document.getElementById("ratext");
+		sessionStorage.setItem("ratext", inputRateText.value); 
+		
+		var inputMail = document.getElementById("mtxt");
+		sessionStorage.setItem("mtxt", inputMail.value); 
+	</script>
+		
+	<script>
+		var x = document.getElementById("gloc");
+
+		function getLocation() {
+		  if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		  } else { 
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		  }
+		}
+
+		function showPosition(position) {
+		  x.innerHTML = "Latitude: " + position.coords.latitude + 
+		  "<br>Longitude: " + position.coords.longitude;
+		}
+	</script>
+	
+</div>
+
+
+</body>
+</html>

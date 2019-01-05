@@ -1,0 +1,79 @@
+.MySlides img{
+    
+    margin-left:15.7%;
+    margin-right: 15%;
+    border-radius: 8px;
+    margin-top:-12.5%;
+    }
+    body
+    {
+        background-image: url("Weddinga.jpg");
+        background-size: cover;
+        background-color: rgba(0,0,0,0.5);
+        filter:blur(0.3px);
+        -webkit-filter: blur(0.3px);
+        position: relative;
+        height: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 2px solid black;
+    }   
+    
+    #desktopview
+    {
+        display: inline-block;
+        margin-left:10%;
+        width:80%;
+        overflow: auto;
+        opacity: 1;
+
+    }
+    ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgba(255,255,255,0.7);
+        border-radius:8px;
+        width:50%;
+        margin-left: 22%;
+        
+    }
+    
+    li
+    {
+        float:right;
+        font-family: "Roboto",sans-serif;
+    }
+    li:last-child
+    {
+        
+        font-family: "Roboto",sans-serif;
+    
+    }
+    li a
+    {
+        display:block;
+        color:black;
+        text-align:center;
+        padding: 8px 10px;
+        text-decoration: none;
+    }
+    li a:hover:not(.active)
+    {
+        background-color: #00cccc;
+        border-radius: 5px;
+    }
+    .active
+    {
+        color:white;
+        background-color:#0066cc;
+    }
+    .active
+    {
+        color:white;
+        background-color:#0066cc;
+        
+    }
+   

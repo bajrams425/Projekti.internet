@@ -1,90 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html manifest="site.appcache">
 
 <head>
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="shortcut icon" href="llogo.ico" />
  <link rel="stylesheet" type="text/css" href="desktop.css">
- <link rel="stylesheet" type="text/css" href="mobile.css">
  
- 
- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
- <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
- <script src="responsiveslides.min.js"></script>
 
+ <title>Wedding and HoneyMoon planner!</title>
+ 
 </head>
 
 <body>
-<div class="phoneSizeMB">
-	<button id="btn" onclick="menudrop()" class="imgb" title="Where to?">
-	<img src="menu.png" id="Menuimg"></img></button>
-	<div class="iMenu" id="pMenu">
-		<a href="#">Link 1</a>
-		<a href="#">Link 2</a>
-		<a href="#">Link 3</a>
-	</div>
-	</button>
-	<button id="homepg" title="You are here!">Home</button>
-</div>
-
-<script>
-
-function menudrop() {
-    document.getElementById("pMenu").classList.toggle("show");
-}
-
-
-window.onclick = function(event) {
-  if (!event.target.matches('.imgb')) {
-
-    var dropdowns = document.getElementsByClassName("iMenu");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-
-
-</script>
-
-<div class="phoneHeader">
-<img src="hwpic.jpg" class="hwp"></img>
-<h1>Find your PERFECT Honeymoon vacation!</h1>
-</div>
-
-<hr class="phr">
-
-<div class="Products">
-	<ul class="rslides">
-		<li id="pr1"><img src="hwpic.jpg" style="float:left">
-			<h3>Plan what's best with our services!<h3>
-			<button class="prb">Products!</button></li>
-		<li id="pr2"><img src="wrings.jpg" alt="">
-			<h3>Still haven't found that perfect place? Look it up here!</h3>
-			<button class="prb">Services!</button></li>
-	</ul>
-	</div>
-</div>
-
-<script>
-$(document).ready(function(){
-	$(function() {
-		$(".rslides").responsiveSlides({
-			auto: true,       
-			speed: 500,            
-			timeout: 4000,          
-			pause: true,
-		});
-	});
-});
-</script>
 
 
 <!--Desktop view-->
@@ -92,15 +20,17 @@ $(document).ready(function(){
 <div id="desktopview">
 	
 	<ul>
-		<li><a href="#about">About</a></li>
-		<li><a href="#contact">Contact</a></li>
-		<li><a href="#news">News</a></li>
+		<li><a href="ContactUS.html" target="_blank">Contact us!</a></li>
+		<li><a href="About Us.html">About US</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Honeymoon.html">Honeymoons</a></li>
+		<li><a href="WeddingVenues.html">Venues</a></li>
 		<li style="float:left;"><a class="active" href="#home">Home</a></li>
 	</ul>
 	
 	<br>
 	
-	<div id="first">
+	<header id="first">
 	
 		<img src = "hwpic.jpg" alt= "wedding picture" style="float:left; border-radius: 7%" border="1" class="fimg"></img>
 		<div class="fhead">
@@ -110,9 +40,9 @@ $(document).ready(function(){
 			Rest assured, and if you want to find more about us, follow the link below!</p>
 			
 			<p style="float:right; margin-right: 2%; margin-bottom: 2%">
-			<a>Click Here! >></a></p>
+			<a class="alink" href="About Us.html">Click Here! >></a></p>
 		</div>
-	</div>
+	</header>
 	
 	<br>
 	
@@ -120,37 +50,77 @@ $(document).ready(function(){
 	
 	<ul>
 		<li class="olist"><img src="wrings.jpg" alt="wedding rings picture" style="width=100%" class="simg" border="1"></img>
-		<h3 style="margin: 2%; text-align: center">In need of that dreamy ring?</h3>
-		<p style="float: right; max-width: 50%; margin-right: 3%"><a>Find your match here!</a><p></li>
+		<h3 style="margin: 2%; text-align: center">In need of that dreamy venue?</h3>
+		<p style="float: right; max-width: 50%; margin-right: 3%"><a class="alink" href="WeddingVenues.html">Find your match here!</a><p></li>
 		<hr class="hline">
-		<li  class="olist"><img src="wrings.jpg" alt="wedding rings picture" style="width=100%" class="simg" border="1"></img></li>
+		<li class="olist"><img src="w3.jpg" alt="wedding rings picture" style="width=100%" class="simg" border="1"></img>
+		<h3 style="margin: 2%; text-align: center">Find the best place.</h3>
+		<p style="float: right; max-width: 50%; margin-right: 3%"><a class="alink" href="WeddingVenues.html">Find your match here!</a><p></li>
 		<hr class="hline">
-		<li  class="olist"><img src="wrings.jpg" alt="wedding rings picture" style="width=100%" class="simg" border="1"></img></li>
+		<li class="olist"><img src="h4.jpg" alt="wedding rings picture" style="width=100%" class="simg" border="1"></img>
+		<h3 style="margin: 2%; text-align: center">Plan the hollidays?</h3>
+		<p style="float: right; max-width: 50%; margin-right: 3%"><a class="alink" href="Honeymoon.html">Click here and get your match</a><p></li>
 		<hr class="hline">
-		<li  class="olist"><img src="wrings.jpg" alt="wedding rings picture" style="width=100%" class="simg" border="1"></img></li>
+		<li class="olist"><img src="h6.jpg" alt="wedding rings picture" style="width=100%" class="simg" border="1"></img>
+		<h3 style="margin: 2%; text-align: center">Or go for a holiday package:</h3>
+		<p style="float: right; max-width: 50%; margin-right: 3%"><a class="alink" href="Honeymoon.html">Click here and find your match</a><p></li>
 	</ul>
 	
 	</div>
 
-	<div id="rart">
 	
-	<h2 style="margin-left: 2%;">A Quick Brief About Us</h2>
-	<p>We started this because somebody made us do it.</p>
-	<p>After a few search in google, we found the idea edhe ja nisem nfk</p>
-	<p>On the left you <b>MIGHT</b> find the proucts and services</p>
-	<p>Below you have some <b>FAKE</b> experiences!</p>
+	<article id="rart">
+		<h2 style="margin-left: 2%;"><u>A Quick Brief About Us</u></h2>
+		<p>We started this to ease people's planning stress.</p>
+		<p>Knowing how stressful it is, we decided to make this page to shorten the ammount of
+		time it takes to get everything done.</p>
+		<p>On the <b>right</b> you will find the <b><i>Products</i></b> and <b><i>Services</i></b> we offer.</p>
+		<p>Below you have some of our <mark>BEST</mark> costumer experiences!</p>
+	</article>
+
+	<br>
+	
+	<div id="tpic">
+	
+		<ul>
+			<li id="1exp"><h3><u>Albiona+Albin</u></h3>
+			<img src="Soneva JANI couples.jpg" alt="gallerypic1" style="width=100%" class="simg" border="1"></img>
+			<p>"We had this great offer and took it. After that we lived the best wedding there is!"</p>
+			<p><a class="alink" href="Gallery.html">Want to know more!</a></p><li>
+			<li id="2exp"><h3><u>Blend+Berna</u></h3>
+			<img src="Song Saa couple.jpg" alt="galleripic2" style="width=50%" class="simg" border="1"></img>
+			<p>"We had this great offer and took it. After that we lived the best <abbr title="Honeymoon">HMOON</abbr> there is!"</p>
+			<p><a class="alink" href="Gallery.html">Want to know more!</a></p></li>
+		</ul>
+	
 	</div>
-
+	
+	<div id="bottomt">
+		<h3 style="text-align:center; padding: 2% 3%; width=100%; border-radius: 15px;" id="lh3"><u>Our beloved sponsors and supporters</u></h3>
+		
+		<table>
+		<tr>
+		<th class="col1">Romantic Antigua</th>
+		<th class="col2">Asador Etxebarri</th>
+		<th class="col3">Mume Boutique Hotel</th>
+		</tr>
+		<tr>
+		<td class="col1">&quotThe 7th best place for weddings, this resort was one of the founders 
+		of the Caribbean luxyry hotel resorts, always surrounded by puffy clouds, and the blue sea.&quot</td>
+		<td class="col2">&quotFound in Spain, Asador Etxebarri is on the top 10 restaurants in the world,
+		 competing with all others with it's speciality Sushi King Rice.&quot</td>
+		<td class="col3">&quotSet along the Shirakawa River and offering views of the Higashiyama mountains, 
+		this place will bring the beatiful tradition to a modern era to offer the best honeymoon vacation you can imagine!&quot</td>
+		</tr>
+		<tr>
+		<td style="text-align:center"><a class="lastlink alink" href="http://www.cocoshotel.com/">Read more about them</a></td>
+		<td style="text-align:center"><a class="lastlink alink" href="http://asadoretxebarri.com/en/">Read more about them</a></td>
+		<td style="text-align:center"><a class="lastlink alink" href="http://hotelmume.com/">Read more about them</a></td>
+		</tr>
+		</table>
+	</div>
+	
 </div>
-
-
-
-
-
-
-
-
-
 
 
 </body>
